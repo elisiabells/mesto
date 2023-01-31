@@ -1,0 +1,11 @@
+.profile__info {
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns: auto 25px;
+    grid-template-rows: 39px, 18px;
+    grid-template-areas:
+    "title button"
+    "subtitle .";
+    margin: 0;
+    margin-left: 30px;
+}
