@@ -14,26 +14,10 @@
 </head>
 
 <body class="root">
-   <div class="popup popup_edit-profile">
-      <div class="popup__container">
-         <button type="button" class="popup__button-close"></button>
-         <h2 class="popup__title">Редактировать профиль</h2>
-         <form name="edit-profile" class="popup__form-edit">
-            <input type="text" name="name" required placeholder="Имя" class="popup__input popup__input_type_name"
-               id="name" minlength="2" maxlength="40">
-            <span class="popup__error-name"></span>
-            <input type="text" name="about" required placeholder="О себе" class="popup__input popup__input_type_info"
-               id="about" minlength="2" maxlength="200">
-            <span class="popup__error-info"></span>
-            <button type="submit" class="popup__button-save">Сохранить</button>
-         </form>
-      </div>
-   </div>
    <div class="page">
       <header class="header">
          <img class="header__logo" src="images/header-logo.svg" alt="Логотип Место">
       </header>
-
       <main class="main">
          <section class="profile">
             <img class="profile__avatar" src="images/avatar.jpg" alt="Аватар профиля">
@@ -50,63 +34,65 @@
                   <img class="element__img" src="images/mutabor.jpg" alt="мутабор">
                   <div class="element__text">
                      <h2 class="element__title">Mutabor</h2>
-                     <form class="element__like">
-                        <button type="button" class="element__like-button element__like-button_active"></button>
-                     </form>
+                     <button type="button" class="element__like-button element__like-button_active"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/werk.jpg" alt="верк">
                   <div class="element__text">
                      <h2 class="element__title">Werk</h2>
-                     <form class="element__like">
-                        <button type="button" class="element__like-button element__like-button_active"></button>
-                     </form>
+                     <button type="button" class="element__like-button element__like-button_active"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/kpd.jpg" alt="кпд">
                   <div class="element__text">
                      <h2 class="element__title">КПД</h2>
-                     <form class="element__like">
-                        <button type="button" class="element__like-button element__like-button_active"></button>
-                     </form>
+                     <button type="button" class="element__like-button element__like-button_active"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/stackenschneider.jpg" alt="штакеншнайдер">
                   <div class="element__text">
                      <h2 class="element__title">Stackenschneider</h2>
-                     <form class="element__like">
-                        <button type="button" class="element__like-button element__like-button_active"></button>
-                     </form>
+                     <button type="button" class="element__like-button element__like-button_active"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/blank.jpg" alt="бланк">
                   <div class="element__text">
                      <h2 class="element__title">Blank</h2>
-                     <form class="element__like">
-                        <button type="button" class="element__like-button element__like-button_active"></button>
-                     </form>
+                     <button type="button" class="element__like-button element__like-button_active"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/k30.jpg" alt="к30">
                   <div class="element__text">
                      <h2 class="element__title">K-30</h2>
-                     <form class="element__like">
-                        <button type="button" class="element__like-button element__like-button_active"></button>
-                     </form>
+                     <button type="button" class="element__like-button element__like-button_active"></button>
                   </div>
                </li>
             </ul>
          </section>
       </main>
-
       <footer class="footer">
          <p class="footer__copyright">&copy; 2023. Елизавета Муратова</p>
       </footer>
+      <div class="popup popup_edit-profile">
+         <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form name="edit-profile" class="popup__form-edit">
+               <input type="text" name="name" required placeholder="Имя" class="popup__input popup__input_type_name"
+                  id="name" minlength="2" maxlength="40">
+               <span class="popup__error-name"></span>
+               <input type="text" name="about" required placeholder="О себе" class="popup__input popup__input_type_info"
+                  id="about" minlength="2" maxlength="200">
+               <span class="popup__error-info"></span>
+               <button type="submit" class="popup__button-save">Сохранить</button>
+            </form>
+         </div>
+      </div>
    </div>
    <script src="scripts/index.js"></script>
 </body>

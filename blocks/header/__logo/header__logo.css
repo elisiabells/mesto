@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 900px) {
    .header__logo {
-       margin-bottom: 31.6px;
-       margin-left: 27px;
+      margin-bottom: 31px;
+      margin-left: 27px;
    }
 }
