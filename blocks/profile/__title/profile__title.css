@@ -1,5 +1,4 @@
 .profile__title {
-   grid-area: title;
    font-style: normal;
    font-weight: 500;
    font-size: 42px;
@@ -20,6 +19,6 @@
       line-height: 33px;
       text-align: center;
       padding: 0;
-      padding-bottom: 14px;
+      min-width: 189px;
    }
 }
