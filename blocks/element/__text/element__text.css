@@ -3,4 +3,11 @@
    justify-content: space-around;
    align-items: center;
    background-color: #fff;
+   min-height: 77px;
+}
+
+@media screen and (max-width: 500px) {
+   .elements__text {
+      min-width: 246px;
+   }
 }
