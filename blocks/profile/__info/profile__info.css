@@ -3,6 +3,7 @@
     margin: 0;
     margin-left: 30px;
     flex-grow: 1;
+    max-width: 62%;
 }
 
 @media screen and (max-width: 720px) {
