@@ -45,5 +45,5 @@ function handleProfileFormSubmit(evt) {
   closePopup(popupContainerEditProfile);
 }
 
-popupButtonOpen.addEventListener("click", openProfilePopup); //  Открытие попапа изменения профиля
+openPopupButton.addEventListener("click", openProfilePopup); //  Открытие попапа изменения профиля
 profileEdit.addEventListener("submit", handleProfileFormSubmit); //   Сохранение данных в профиль
