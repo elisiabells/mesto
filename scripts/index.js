@@ -8,42 +8,35 @@ const closePopupButton = document.querySelector('.popup__button-close');
 const savePopupButton = document.querySelector('.popup__button-save');
 
 //      Данные в профиле
-const profileInfo = document.querySelector('.profile__info');
-const profileTitle = document.querySelector('.profile__title-text');
+const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
 
 //      Popup профиля
-const profileEdit = document.querySelector('.edit-profile');
-const popupInputTypeName = document.querySelector('.popup__input_type_name');
-const popupInputTypeInfo = document.querySelector('.popup__input_type_info');
+const popupInputTypeName = popupFormEditProfile.querySelector('.popup__input_type_name');
+const popupInputTypeInfo = popupFormEditProfile.querySelector('.popup__input_type_info');
 
+//    открытие
+openPopupButton.addEventListener('click', function() {
+  popupContainerEditProfile.classList.add('popup_opened');
 
-
-//      Открытие формы 
-openPopupButton.addEventListener('click', function () {
-  popupContainerEditProfile.classList.add("popup_opened");
-});
-
-//      Закрытие формы на Х
-closePopupButton.addEventListener('click', function () {
-  popupContainerEditProfile.classList.remove("popup_opened");
-});
-
-
-// Inputы popup профиля
-
-function openProfilePopup() {
   popupInputTypeName.value = profileTitle.textContent;
   popupInputTypeInfo.value = profileSubtitle.textContent;
-  openPopup(popupContainerEditProfile);
+});
+
+//  закрытие
+function closePopup() {
+  popupContainerEditProfile.classList.remove('popup_opened');
 }
 
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
+closePopupButton.addEventListener('click', function() {
+  closePopup();
+});
+
+function saveFormProfileInfo (evt) {
+  evt.preventDefault ();
   profileTitle.textContent = popupInputTypeName.value;
   profileSubtitle.textContent = popupInputTypeInfo.value;
-  closePopup(popupContainerEditProfile);
-}
+  closePopup();
+};
 
-openPopupButton.addEventListener("click", openProfilePopup); //  Открытие попапа изменения профиля
-profileEdit.addEventListener("submit", handleProfileFormSubmit); //   Сохранение данных в профиль
+popupFormEditProfile.addEventListener ('submit', saveFormProfileInfo);
