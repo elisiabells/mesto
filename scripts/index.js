@@ -1,6 +1,6 @@
 //      Контейнер popup
-const popupContainerEditProfile = document.querySelector('.popup_edit-profile');
-const popupFormEditProfile = document.querySelector('.popup__form-edit');
+const popupContainerEditProfile = document.querySelector('.popup');
+const popupFormEditProfile = document.querySelector('.popup__form');
 
 //      Кнопки 
 const openPopupButton = document.querySelector('.profile__edit-button');
@@ -12,8 +12,8 @@ const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
 
 //      Popup профиля
-const popupInputTypeName = popupFormEditProfile.querySelector('.popup__input_type_name');
-const popupInputTypeInfo = popupFormEditProfile.querySelector('.popup__input_type_info');
+const popupInputTypeName = popupFormEditProfile.querySelector('.popup__input-name');
+const popupInputTypeInfo = popupFormEditProfile.querySelector('.popup__input-about');
 
 //    открытие
 openPopupButton.addEventListener('click', function() {

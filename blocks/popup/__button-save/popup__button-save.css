@@ -1,28 +1,26 @@
 .popup__button-save {
-   width: 100%;
-   min-height: 50px;
    background-color: #000;
-   font-size: 18px;
    font-style: normal;
    font-weight: 400;
+   font-size: 18px;
    line-height: 22px;
    text-align: center;
-   color: white;
-   border-radius: 2px;
-   border: none;
+   color: #fff;
+   height: 50px;
    margin: 0;
-}
-
-@media screen and (max-width: 550px) {
-   .popup__button-save {
-      font-size: 14px;
-      line-height: 17px;
-      min-height: 46px;
-      margin-top: 30px;
-   }
+   margin-top: 48px;
 }
 
 .popup__button-save:hover {
    opacity: .8;
    cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+   .popup__button-save {
+      font-size: 14px;
+      line-height: 17px;
+      height: 46px;
+      margin-top: 30px;
+   }
 }
