@@ -4,10 +4,9 @@
    background-repeat: no-repeat;
    background-position: center;
    border: 2px solid #fff;
-   padding: 0;
-   min-height: 50px;
-   min-width: 150px;
-   margin-left: 24px;
+   height: 50px;
+   width: 150px;
+   margin-left: 42px;
    transition: opacity .5s;
 }
 
@@ -18,7 +17,7 @@
 
 @media screen and (max-width: 720px) {
    .profile__add-button {
-      min-width: 282px;
+      width: 282px;
       margin: 0 auto;
       margin-top: 36px;
    }
