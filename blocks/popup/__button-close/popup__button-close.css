@@ -1,14 +1,15 @@
 .popup__button-close {
-   background-image: url(../../../images/close-button.png);
+   background-image: url(../../../images/close-button.svg);
    background-repeat: no-repeat;
    background-position: center;
-   background-color: #000;
+   background-color: rgba(0, 0, 0, 0);
    position: absolute;
    top: -40px;
    right: -40px;
    width: 32px;
    height: 32px;
    transition: opacity .5s;
+   border: 0;
 }
 
 .popup__button-close:hover {
@@ -20,7 +21,7 @@
    .popup__button-close {
       width: 20px;
       height: 20px;
-      top: -30px;
+      top: -35px;
       right: 0;
    }
 }

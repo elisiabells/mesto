@@ -8,7 +8,9 @@
    color: #fff;
    height: 50px;
    margin: 0;
-   margin-top: 48px;
+   margin-top: 23px;
+   margin-bottom: 37px;
+   border-radius: 2px;
 }
 
 .popup__button-save:hover {
@@ -21,6 +23,7 @@
       font-size: 14px;
       line-height: 17px;
       height: 46px;
-      margin-top: 43px;
+      margin-top: 20px;
+      margin-bottom: 25px;
    }
 }

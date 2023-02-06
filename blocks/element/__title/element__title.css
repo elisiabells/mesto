@@ -9,4 +9,5 @@
    overflow: hidden;
    max-width: 200px;
    flex-grow: 1;
+   margin: 0;
 }

@@ -24,11 +24,11 @@
             <div class="profile__info">
                <div class="profile__info-title">
                   <h1 class="profile__title">Жак-Ив Кусто</h1>
-                  <button type="button" class="profile__edit-button"></button>
+                  <button type="button" aria-label="edit" class="profile__edit-button"></button>
                </div>
                <p class="profile__subtitle">Исследователь океана</p>
             </div>
-            <button type="button" class="profile__add-button"></button>
+            <button type="button" aria-label="add" class="profile__add-button"></button>
          </section>
          <section class="cards">
             <ul class="elements">
@@ -36,42 +36,42 @@
                   <img class="element__img" src="images/mutabor.jpg" alt="мутабор">
                   <div class="element__text">
                      <h2 class="element__title">Mutabor</h2>
-                     <button type="button" class="element__like-button element__like-button_active"></button>
+                     <button type="button" class="element__like-button"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/werk.jpg" alt="верк">
                   <div class="element__text">
                      <h2 class="element__title">Werk</h2>
-                     <button type="button" class="element__like-button element__like-button_active"></button>
+                     <button type="button" aria-label="like" class="element__like-button"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/kpd.jpg" alt="кпд">
                   <div class="element__text">
                      <h2 class="element__title">КПД</h2>
-                     <button type="button" class="element__like-button element__like-button_active"></button>
+                     <button type="button" class="element__like-button"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/stackenschneider.jpg" alt="штакеншнайдер">
                   <div class="element__text">
                      <h2 class="element__title">Stackenschneider</h2>
-                     <button type="button" class="element__like-button element__like-button_active"></button>
+                     <button type="button" class="element__like-button"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/blank.jpg" alt="бланк">
                   <div class="element__text">
                      <h2 class="element__title">Blank</h2>
-                     <button type="button" class="element__like-button element__like-button_active"></button>
+                     <button type="button" class="element__like-button"></button>
                   </div>
                </li>
                <li class="element">
                   <img class="element__img" src="images/k30.jpg" alt="к30">
                   <div class="element__text">
                      <h2 class="element__title">K-30</h2>
-                     <button type="button" class="element__like-button element__like-button_active"></button>
+                     <button type="button" class="element__like-button"></button>
                   </div>
                </li>
             </ul>
@@ -84,9 +84,9 @@
          <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
             <button type="button" class="popup__button-close"></button>
-            <form name="popup" class="popup__form">
-               <input type="text" name="name" required placeholder="Имя" class="popup__input-name">
-               <input type="text" name="about" required placeholder="О себе" class="popup__input-about">
+            <form name="popup-edit" class="popup__form">
+               <input type="text" name="name" required placeholder="Имя" class="popup__input popup__input_name">
+               <input type="text" name="about" required placeholder="О себе" class="popup__input popup__input_about">
                <button type="submit" class="popup__button-save">Сохранить</button>
             </form>
          </div>
