@@ -3,11 +3,10 @@
    background-repeat: no-repeat;
    background-position: center;
    background-color: rgba(0, 0, 0, 0);
+   background-size: 32px;
    position: absolute;
    top: -40px;
    right: -40px;
-   width: 32px;
-   height: 32px;
    transition: opacity .5s;
    border: 0;
 }
@@ -19,9 +18,8 @@
 
 @media screen and (max-width: 720px) {
    .popup__button-close {
-      width: 20px;
-      height: 20px;
-      top: -35px;
-      right: 0;
+      background-size: 20px;
+      top: -40px;
+      right: -8px;
    }
 }

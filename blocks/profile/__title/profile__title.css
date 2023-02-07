@@ -17,5 +17,7 @@
       line-height: 33px;
       text-align: center;
       min-width: 189px;
+      margin-bottom: 0;
+      margin-right: 9px;
    }
 }
