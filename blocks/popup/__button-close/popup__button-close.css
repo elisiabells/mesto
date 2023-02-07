@@ -3,7 +3,8 @@
    background-repeat: no-repeat;
    background-position: center;
    background-color: rgba(0, 0, 0, 0);
-   background-size: 32px;
+   height: 32px;
+   width: 32px;
    position: absolute;
    top: -40px;
    right: -40px;

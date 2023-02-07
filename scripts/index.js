@@ -11,8 +11,8 @@ const openPopupButton = document.querySelector('.profile__edit-button');
 const closePopupButton = document.querySelector('.popup__button-close');
 
 //      данные из popup
-const popupInputTypeName = popupFormEditProfile.querySelector('.popup__input_name');
-const popupInputTypeInfo = popupFormEditProfile.querySelector('.popup__input_about');
+const popupInputTypeName = popupFormEditProfile.querySelector('.popup__input_type_name');
+const popupInputTypeInfo = popupFormEditProfile.querySelector('.popup__input_type_about');
 
 
 
