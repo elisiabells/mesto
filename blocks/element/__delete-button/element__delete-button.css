@@ -4,17 +4,16 @@
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
-   background-color: rgba(0,0,0, 0);
+   background-color: rgba(0, 0, 0, 0);
    border: 0;
    width: 18px;
    height: 19px;
-   top: 18px;
-   right: 15px;
+   top: 20px;
+   right: 20px;
    transition: opacity .5s;
    cursor: pointer;
 }
 
 .element__delete-button:hover {
    opacity: .6;
-
 }
