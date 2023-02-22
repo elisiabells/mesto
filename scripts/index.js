@@ -142,5 +142,7 @@ function openFullImgPopup(name, link) {
   fullImgCaption.textContent = name;
 
   popup.classList.add('popup_opened');
-  close.classList.remove('popup_opened');
+  close.addEventListener('click', function () {
+    popup.classList.remove('popup_opened');
+  });
 };
