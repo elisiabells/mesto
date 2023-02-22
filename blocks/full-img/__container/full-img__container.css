@@ -1,3 +1,4 @@
-full-img__container {
+.full-img__container {
    position: relative;
+   margin: 0;
 }
