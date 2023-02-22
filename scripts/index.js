@@ -95,8 +95,8 @@ function openAddCard() {
 }
 
 function openFullImgPopup(name, link) {
-  const fullImg = document.querySelector('.full-img__img');
-  const fullImgCaption = document.querySelector('.full-img__caption');
+  const fullImg = document.querySelector('.popup__full-img-img');
+  const fullImgCaption = document.querySelector('.popup__full-img-caption');
   const popup = document.querySelector('.popup_img');
   const close = document.querySelector('.popup__img-close');
 
