@@ -41,7 +41,6 @@ const popupInputTypeInfo = popupFormEditProfile.querySelector('.popup__input_typ
 
 // константы popup_add
 const addCardButton = document.querySelector('.profile__add-button');
-
 const popupAdd = document.querySelector('.popup_add');
 const addCardForm = popupAdd.querySelector('.popup__form-add');
 const nameInput = addCardForm.querySelector('.popup__input_type_card');
@@ -147,6 +146,4 @@ addCardForm.addEventListener('submit', function (event) {
   addCard(name, link);
   closePopup();
   addCardForm.reset();
-  nameInput.value = '';
-  linkInput.value = '';
 });
