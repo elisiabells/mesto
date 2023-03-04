@@ -55,18 +55,18 @@ const fullImgCaption = popupImg.querySelector('.popup__full-img-caption');
 const elements = document.querySelector('.elements');
 const elementTemplate = document.querySelector('.element-template').content;
 
+const popup = document.querySelector('.popup');
 
 /////          функции       /////
 
 // функции открытия и закрытия попапа
-function openPopup(popupSelector) {
-  const popup = document.querySelector(popupSelector);
+function openPopup() {
   popup.classList.add('popup_opened');
 }
 
 function closePopup() {
-  const popup = Array.from(document.querySelectorAll('.popup'));
-  popup.forEach((popup) => {
+  const popups = Array.from(document.querySelectorAll('.popup'));
+  popups.forEach((popup) => {
     popup.classList.remove('popup_opened');
   });
 }
