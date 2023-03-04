@@ -55,17 +55,16 @@ const fullImgCaption = popupImg.querySelector('.popup__full-img-caption');
 const elements = document.querySelector('.elements');
 const elementTemplate = document.querySelector('.element-template').content;
 
-const popup = document.querySelector('.popup');
-
 /////          функции       /////
 
 // функции открытия и закрытия попапа
-function openPopup() {
-  popup.classList.add('popup_opened');
+const popups = document.querySelectorAll('.popup');
+
+function openPopup(popup) { 
+  popup.classList.add('popup_opened'); 
 }
 
-function closePopup() {
-  const popups = Array.from(document.querySelectorAll('.popup'));
+function closePopup() { 
   popups.forEach((popup) => {
     popup.classList.remove('popup_opened');
   });
@@ -119,7 +118,7 @@ function openFullImgPopup(name, link) {
   fullImg.alt = name;
   fullImgCaption.textContent = name;
 
-  openPopup('.popup_img');
+  openPopup(popupImg);
 }
 
 // функция, добавляющая карточки из массива
@@ -132,10 +131,10 @@ initialCards.forEach(({ name, link }) => {
 openPopupButton.addEventListener('click', () => {
   popupInputTypeName.value = profileTitle.textContent;
   popupInputTypeInfo.value = profileSubtitle.textContent;
-  openPopup('.popup_edit');
+  openPopup(popupEdit);
 });
 
-addCardButton.addEventListener('click', () => openPopup('.popup_add'));
+addCardButton.addEventListener('click', () => openPopup(popupAdd));
 
 popupFormEditProfile.addEventListener('submit', saveFormProfileInfo);
 
