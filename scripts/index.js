@@ -28,6 +28,7 @@ const initialCards = [
 ];
 
 const closePopupButtons = document.querySelectorAll('.popup__button-close');
+const popups = document.querySelectorAll('.popup');
 
 // константы popup_edit
 const profileTitle = document.querySelector('.profile__title');
@@ -57,18 +58,27 @@ const elementTemplate = document.querySelector('.element-template').content;
 
 /////          функции       /////
 
-// функции открытия и закрытия попапа
-const popups = document.querySelectorAll('.popup');
-
+// функция открытия попапа
 function openPopup(popup) { 
   popup.classList.add('popup_opened'); 
-}
+  popup.addEventListener('click', closePopupOnOverlayClick);
+  document.addEventListener('keydown', closePopupOnEsc);
+};
 
+// функции закрытия попапа
 function closePopup() { 
   popups.forEach((popup) => {
     popup.classList.remove('popup_opened');
   });
-}
+  document.removeEventListener('keydown', closePopupOnEsc);
+};
+
+// функция закрытия попапа по клику на оверлей
+function closePopupOnOverlayClick(event) {
+  if (event.target.classList.contains('popup')) {
+    closePopup(event.target);
+  }
+};
 
 // функция, добавляющая обработчики на все кнопки закрытия
 closePopupButtons.forEach((button) => {
@@ -146,3 +156,12 @@ addCardForm.addEventListener('submit', function (event) {
   closePopup();
   addCardForm.reset();
 });
+
+
+// функция закрытия попапа по нажатию на Esc
+function closePopupOnEsc(event) {
+  if (event.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+};

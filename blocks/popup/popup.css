@@ -9,6 +9,6 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: .8s, height .7s .7s;
+  transition: .6s, height .6s .6s;
   visibility: hidden;
 }
