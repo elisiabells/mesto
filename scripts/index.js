@@ -80,6 +80,14 @@ function closePopupOnOverlayClick(event) {
   }
 };
 
+// функция закрытия попапа по нажатию на Esc
+function closePopupOnEsc(event) {
+  if (event.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+};
+
 // функция, добавляющая обработчики на все кнопки закрытия
 closePopupButtons.forEach((button) => {
   button.addEventListener('click', closePopup);
@@ -156,12 +164,3 @@ addCardForm.addEventListener('submit', function (event) {
   closePopup();
   addCardForm.reset();
 });
-
-
-// функция закрытия попапа по нажатию на Esc
-function closePopupOnEsc(event) {
-  if (event.key === 'Escape') {
-    const openedPopup = document.querySelector('.popup_opened');
-    closePopup(openedPopup);
-  }
-};
