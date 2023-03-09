@@ -58,11 +58,22 @@ const elementTemplate = document.querySelector('.element-template').content;
 
 /////          функции       /////
 
+// функция, деактивирующая кнопку сабмита формы
+function disableSubmitButton(form) {
+  const submitButton = form.querySelector('.popup__button-save');
+  if (submitButton.disabled === false) {
+    submitButton.setAttribute('disabled', true);
+    submitButton.classList.add('popup__button-save_inactive');
+  }
+};
+
 // функция открытия попапа
 function openPopup(popup) { 
   popup.classList.add('popup_opened'); 
   popup.addEventListener('click', closePopupOnOverlayClick);
   document.addEventListener('keydown', closePopupOnEsc);
+  popup.querySelector('.popup__form').reset();
+  disableSubmitButton(popup.querySelector('.popup__form'));
 };
 
 // функции закрытия попапа
@@ -163,4 +174,5 @@ addCardForm.addEventListener('submit', function (event) {
   addCard(name, link);
   closePopup();
   addCardForm.reset();
+  disableSubmitButton(addCardForm);
 });
