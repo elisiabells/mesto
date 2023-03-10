@@ -58,26 +58,18 @@ const elementTemplate = document.querySelector('.element-template').content;
 
 /////          функции       /////
 
-// функция, деактивирующая кнопку сабмита формы
-function disableSubmitButton(form) {
-  const submitButton = form.querySelector('.popup__button-save');
-  if (submitButton.disabled === false) {
-    submitButton.setAttribute('disabled', true);
-    submitButton.classList.add('popup__button-save_inactive');
-  }
-};
-
 // функция открытия попапа
-function openPopup(popup) { 
-  popup.classList.add('popup_opened'); 
-  popup.addEventListener('click', closePopupOnOverlayClick);
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupOnEsc);
-  popup.querySelector('.popup__form').reset();
-  disableSubmitButton(popup.querySelector('.popup__form'));
 };
+popupEdit.addEventListener('click', closePopupOnOverlayClick);
+popupAdd.addEventListener('click', closePopupOnOverlayClick);
+popupImg.addEventListener('click', closePopupOnOverlayClick);
+
 
 // функции закрытия попапа
-function closePopup() { 
+function closePopup() {
   popups.forEach((popup) => {
     popup.classList.remove('popup_opened');
   });
@@ -174,5 +166,7 @@ addCardForm.addEventListener('submit', function (event) {
   addCard(name, link);
   closePopup();
   addCardForm.reset();
-  disableSubmitButton(addCardForm);
+  const saveButton = event.submitter;
+  saveButton.classList.add('popup__button-save_inactive');
+  saveButton.disabled = true;
 });

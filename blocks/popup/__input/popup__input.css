@@ -8,8 +8,10 @@
    text-overflow: ellipsis;
    white-space: nowrap;
    overflow: hidden;
-   height: 30px;
+   min-height: 30px;
    border: 1px solid transparent;
    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
    outline: none;
+   display: block;
+   width: 97%;
 }
