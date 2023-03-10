@@ -37,7 +37,6 @@ function openPopup(popup) {
   document.addEventListener('keydown', closePopupOnEsc);
 };
 
-
 // функция закрытия попапа по клику на оверлей
 function closePopupOnOverlayClick(event) {
   if (event.target.classList.contains('popup')) {
@@ -60,10 +59,11 @@ function closePopup(popup) {
 }
 
 // функция, добавляющая обработчики на все кнопки закрытия
-closePopupButtons.forEach((button) => {
-  const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
-});
+closePopupButtons.forEach(btn => {
+    const popup = btn.closest('.popup');
+    popup.addEventListener('mousedown', closePopupOnOverlayClick);
+    btn.addEventListener('click', () => closePopup(popup)); 
+  });
 
 // функция сохранения формы профиля
 function saveFormProfileInfo(evt) {
@@ -138,7 +138,3 @@ addCardForm.addEventListener('submit', function (event) {
 
 addCardButton.addEventListener('click', () => openPopup(popupAdd));
 popupFormEditProfile.addEventListener('submit', saveFormProfileInfo);
-
-popupEdit.addEventListener('click', closePopupOnOverlayClick);
-popupAdd.addEventListener('click', closePopupOnOverlayClick);
-popupImg.addEventListener('click', closePopupOnOverlayClick);
