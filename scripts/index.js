@@ -156,7 +156,7 @@ addCardForm.addEventListener('submit', function (event) {
   const name = nameInput.value;
   const link = linkInput.value;
   addCard(name, link);
-  closePopup();
+  closePopup(popupAdd);
   addCardForm.reset();
   const saveButton = event.submitter;
   saveButton.classList.add('popup__button-save_inactive');
