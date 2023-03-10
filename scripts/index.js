@@ -97,7 +97,7 @@ function saveFormProfileInfo(evt) {
   evt.preventDefault();
   profileTitle.textContent = popupInputTypeName.value;
   profileSubtitle.textContent = popupInputTypeInfo.value;
-  closePopup();
+  closePopup(popupEdit);
 }
 
 // функция создания новой карточки
