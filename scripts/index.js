@@ -63,10 +63,6 @@ function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupOnEsc);
 };
-popupEdit.addEventListener('click', closePopupOnOverlayClick);
-popupAdd.addEventListener('click', closePopupOnOverlayClick);
-popupImg.addEventListener('click', closePopupOnOverlayClick);
-
 
 // функции закрытия попапа
 function closePopup() {
@@ -155,10 +151,6 @@ openPopupButton.addEventListener('click', () => {
   openPopup(popupEdit);
 });
 
-addCardButton.addEventListener('click', () => openPopup(popupAdd));
-
-popupFormEditProfile.addEventListener('submit', saveFormProfileInfo);
-
 addCardForm.addEventListener('submit', function (event) {
   event.preventDefault();
   const name = nameInput.value;
@@ -170,3 +162,10 @@ addCardForm.addEventListener('submit', function (event) {
   saveButton.classList.add('popup__button-save_inactive');
   saveButton.disabled = true;
 });
+
+addCardButton.addEventListener('click', () => openPopup(popupAdd));
+popupFormEditProfile.addEventListener('submit', saveFormProfileInfo);
+
+popupEdit.addEventListener('click', closePopupOnOverlayClick);
+popupAdd.addEventListener('click', closePopupOnOverlayClick);
+popupImg.addEventListener('click', closePopupOnOverlayClick);
