@@ -64,13 +64,6 @@ function openPopup(popup) {
   document.addEventListener('keydown', closePopupOnEsc);
 };
 
-// функции закрытия попапа
-function closePopup() {
-  popups.forEach((popup) => {
-    popup.classList.remove('popup_opened');
-  });
-  document.removeEventListener('keydown', closePopupOnEsc);
-};
 
 // функция закрытия попапа по клику на оверлей
 function closePopupOnOverlayClick(event) {
@@ -87,9 +80,16 @@ function closePopupOnEsc(event) {
   }
 };
 
+// функции закрытия попапа
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupOnEsc);
+}
+
 // функция, добавляющая обработчики на все кнопки закрытия
 closePopupButtons.forEach((button) => {
-  button.addEventListener('click', closePopup);
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
 });
 
 // функция сохранения формы профиля
